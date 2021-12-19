@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import math
 import random
 import numpy as np
@@ -7,7 +8,6 @@ import struct as st
 
 import layer
 import cost
-import optimizer
 
 def process_image_file(image_file):
     image_file.seek(0)
@@ -39,7 +39,7 @@ def process_label_file(label_file):
     return one_hot_labels
 
 def dataset():
-    home = os.path.expanduser('~') + '/Datasets/'
+    home = os.path.expanduser('~') + '/Datasets/mnist/'
 
     test_images = open(home + 't10k-images-idx3-ubyte', 'rb')
     test_labels = open(home + 't10k-labels-idx1-ubyte', 'rb')
